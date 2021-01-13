@@ -1,19 +1,32 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import react from "react";
+import React from 'react';
+import {
+  Box,
+  Container,
+  Typography,
+} from '@material-ui/core';
 
-export default function Home() {
+
+
+import Link from '../src/Link';
+import Copyright from '../src/Copyright';
+
+function Home() {
   return (
-    
-    <center>
-      <br />
-      <br />
-      <div>
-        <div>
-        "IM EYAD THE BIG GUY"
-        </div>
-      <img src="eyad.jpg" width="214" height="320" />
-      </div>
-    </center>
-  )
+    <Container maxWidth="sm">
+      
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Next.js example
+        </Typography>
+        <Link href="/about" color="secondary">
+          Go to the about page
+        </Link>
+       
+          <Copyright />
+        
+      </Box>
+    </Container>
+  );
 }
+
+export default Home;
